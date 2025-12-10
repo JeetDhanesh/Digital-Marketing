@@ -13,16 +13,17 @@
 					<div class="collapse navbar-collapse main-menu">
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item submenu"><a class="nav-link" href="index-2.html">Home</a>
-                                    <ul>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a>
+                                    {{-- <ul>
                                         <li class="nav-item"><a class="nav-link" href="index.html">Home - Main</a></li>
                                         <li class="nav-item"><a class="nav-link" href="index-image.html">Home - Image</a></li>
                                         <li class="nav-item"><a class="nav-link" href="index-slider.html">Home - Slider</a></li>
-                                    </ul>
+                                    </ul> --}}
                                 </li>
                                 <li class="nav-item"><a class="nav-link" href="{{route('about')}}">About Us</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{route('service')}}">Services</a></li>
-                                <li class="nav-item submenu"><a class="nav-link" href="#">Pages</a>
+                                <li class="nav-item"><a class="nav-link" href="{{route('blog')}}">Blog</a></li>
+                                {{-- <li class="nav-item submenu"><a class="nav-link" href="#">Pages</a>
                                     <ul>
                                         <li class="nav-item"><a class="nav-link" href="service-single.html">Service Details</a></li>
                                         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
@@ -38,8 +39,8 @@
                                         <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
                                         <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
                                     </ul>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                                </li> --}}
+                                <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact Us</a></li>
                             </ul>
                         </div>
 

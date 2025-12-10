@@ -64,155 +64,25 @@
     <div class="page-services">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp">
-                        <!-- Service Item Header Start -->
-                        <div class="service-item-header">
-                            <div class="icon-box">
-                                <img src="{{ asset('assets/front/images/icon-service-1.svg')}}" alt="">
-                            </div>
-
-                            <div class="service-arrow">
-                                <a href="service-single.html"><img src="{{ asset('assets/front/images/arrow-accent.svg')}}" alt=""></a>
-                            </div>
+                @foreach($services as $key => $service)
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item wow fadeInUp" data-wow-delay="{{ $key * 0.2 }}s">
+                    <div class="service-item-header">
+                        <div class="icon-box">
+                             <img src="{{ asset('uploads/services/'.$service->icon) }}" alt="{{ $service->title }}">
                         </div>
-                        <!-- Service Item Header End -->
 
-                        <!-- Service Item Body Start -->
-                        <div class="service-item-body">
-                            <h3>branding and identity</h3>
-                            <p>Developing a compelling brand identity through strategy, visuals, and  to build strong customer connections.</p>
+                        <div class="service-arrow">
+                            <a href="{{ $service->link ?? '#' }}"><img src="{{ asset('assets/front/images/arrow-accent.svg')}}" alt=""></a>
                         </div>
-                        <!-- Service Item Body End -->
                     </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.2s">
-                        <!-- Service Item Header Start -->
-                        <div class="service-item-header">
-                            <div class="icon-box">
-                                <img src="{{ asset('assets/front/images/icon-service-2.svg')}}" alt="">
-                            </div>
-
-                            <div class="service-arrow">
-                                <a href="service-single.html"><img src="{{ asset('assets/front/images/arrow-accent.svg')}}" alt=""></a>
-                            </div>
-                        </div>
-                        <!-- Service Item Header End -->
-
-                        <!-- Service Item Body Start -->
-                        <div class="service-item-body">
-                            <h3>digital marketing</h3>
-                            <p>Developing a compelling brand identity through strategy, visuals, and  to build strong customer connections.</p>
-                        </div>
-                        <!-- Service Item Body End -->
+                    <div class="service-item-body">
+                        <h3>{{ $service->title }}</h3>
+                        <p>{{ $service->description }}</p>
                     </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.4s">
-                        <!-- Service Item Header Start -->
-                        <div class="service-item-header">
-                            <div class="icon-box">
-                                <img src="{{ asset('assets/front/images/icon-service-3.svg')}}" alt="">
-                            </div>
-
-                            <div class="service-arrow">
-                                <a href="service-single.html"><img src="{{ asset('assets/front/images/arrow-accent.svg')}}" alt=""></a>
-                            </div>
-                        </div>
-                        <!-- Service Item Header End -->
-
-                        <!-- Service Item Body Start -->
-                        <div class="service-item-body">
-                            <h3>creative content production</h3>
-                            <p>Developing a compelling brand identity through strategy, visuals, and  to build strong customer connections.</p>
-                        </div>
-                        <!-- Service Item Body End -->
                     </div>
-                    <!-- Service Item End -->
                 </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.6s">
-                        <!-- Service Item Header Start -->
-                        <div class="service-item-header">
-                            <div class="icon-box">
-                                <img src="{{ asset('assets/front/images/icon-service-4.svg')}}" alt="">
-                            </div>
-
-                            <div class="service-arrow">
-                                <a href="service-single.html"><img src="{{ asset('assets/front/images/arrow-accent.svg')}}" alt=""></a>
-                            </div>
-                        </div>
-                        <!-- Service Item Header End -->
-
-                        <!-- Service Item Body Start -->
-                        <div class="service-item-body">
-                            <h3> Content Creation</h3>
-                            <p>Developing a compelling brand identity through strategy, visuals, and  to build strong customer connections.</p>
-                        </div>
-                        <!-- Service Item Body End -->
-                    </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.8s">
-                        <!-- Service Item Header Start -->
-                        <div class="service-item-header">
-                            <div class="icon-box">
-                                <img src="{{ asset('assets/front/images/icon-service-5.svg')}}" alt="">
-                            </div>
-
-                            <div class="service-arrow">
-                                <a href="service-single.html"><img src="{{ asset('assets/front/images/arrow-accent.svg')}}" alt=""></a>
-                            </div>
-                        </div>
-                        <!-- Service Item Header End -->
-
-                        <!-- Service Item Body Start -->
-                        <div class="service-item-body">
-                            <h3>E-commerce Solutions</h3>
-                            <p>Developing a compelling brand identity through strategy, visuals, and  to build strong customer connections.</p>
-                        </div>
-                        <!-- Service Item Body End -->
-                    </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="1s">
-                        <!-- Service Item Header Start -->
-                        <div class="service-item-header">
-                            <div class="icon-box">
-                                <img src="{{ asset('assets/front/images/icon-service-6.svg')}}" alt="">
-                            </div>
-
-                            <div class="service-arrow">
-                                <a href="service-single.html"><img src="{{ asset('assets/front/images/arrow-accent.svg')}}" alt=""></a>
-                            </div>
-                        </div>
-                        <!-- Service Item Header End -->
-
-                        <!-- Service Item Body Start -->
-                        <div class="service-item-body">
-                            <h3>UX/UI Design</h3>
-                            <p>Developing a compelling brand identity through strategy, visuals, and  to build strong customer connections.</p>
-                        </div>
-                        <!-- Service Item Body End -->
-                    </div>
-                    <!-- Service Item End -->
-                </div>
+            @endforeach
             </div>
         </div>
     </div>
