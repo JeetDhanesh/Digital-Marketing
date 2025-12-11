@@ -15,10 +15,26 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
+        //dd($request->all());
         $credentials = $request->validate([
             'email' => 'required | email', 
-            'password' => 'required',
+            'password' => 'required',   
         ]);
+
+        
+        // $user = \App\Models\User::where('email', $request->email)->first();
+        // if ($user) {
+        //     $match = \Illuminate\Support\Facades\Hash::check($request->password, $user->password);
+        //     dd([
+        //         'Email Found' => true,
+        //         'Database Password Hash' => $user->password,
+        //         'Input Password' => $request->password,
+        //         'Do they match?' => $match ? 'YES' : 'NO'
+        //     ]);
+        // } else {
+        //     dd('User with this email not found in DB');
+        // }
+    
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
